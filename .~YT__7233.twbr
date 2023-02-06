@@ -1,0 +1,2260 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0812.0353                               -->
+<workbook original-version='18.1' source-build='2022.2.1 (20222.22.0812.0353)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='YT_16756564939490' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='INvideos+' inline='true' name='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='INvideos' name='textscan.1jmn7e11d1v8sg1g395tq07aeetc'>
+            <connection class='textscan' directory='/Users/manvijha/Documents/MyProjects/Tableau/YouTubeAnalysis' filename='INvideos.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1jmn7e11d1v8sg1g395tq07aeetc' name='IN_category.csv' table='[IN_category#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='kind' ordinal='1' />
+            <column datatype='string' name='etag' ordinal='2' />
+            <column datatype='integer' name='id' ordinal='3' />
+            <column datatype='string' name='snippet.channelId' ordinal='4' />
+            <column datatype='string' name='snippet.title' ordinal='5' />
+            <column datatype='boolean' name='snippet.assignable' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.1jmn7e11d1v8sg1g395tq07aeetc' name='INvideos.csv' table='[INvideos#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='video_id' ordinal='0' />
+              <column datatype='string' date-parse-format='dd.yy.MM' name='trending_date' ordinal='1' />
+              <column datatype='string' name='title' ordinal='2' />
+              <column datatype='string' name='channel_title' ordinal='3' />
+              <column datatype='integer' name='category_id' ordinal='4' />
+              <column datatype='datetime' name='publish_time' ordinal='5' />
+              <column datatype='string' name='tags' ordinal='6' />
+              <column datatype='integer' name='views' ordinal='7' />
+              <column datatype='integer' name='likes' ordinal='8' />
+              <column datatype='integer' name='dislikes' ordinal='9' />
+              <column datatype='integer' name='comment_count' ordinal='10' />
+              <column datatype='string' name='thumbnail_link' ordinal='11' />
+              <column datatype='boolean' name='comments_disabled' ordinal='12' />
+              <column datatype='boolean' name='ratings_disabled' ordinal='13' />
+              <column datatype='boolean' name='video_error_or_removed' ordinal='14' />
+              <column datatype='string' name='description' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1jmn7e11d1v8sg1g395tq07aeetc' name='IN_category.csv' table='[IN_category#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='kind' ordinal='1' />
+              <column datatype='string' name='etag' ordinal='2' />
+              <column datatype='integer' name='id' ordinal='3' />
+              <column datatype='string' name='snippet.channelId' ordinal='4' />
+              <column datatype='string' name='snippet.title' ordinal='5' />
+              <column datatype='boolean' name='snippet.assignable' ordinal='6' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[IN_category.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>video_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[video_id]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>video_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trending_date</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[trending_date]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>trending_date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>channel_title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[channel_title]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>channel_title</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[category_id]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>category_id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>publish_time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[publish_time]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>publish_time</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tags</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tags]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>tags</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>views</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[views]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>views</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>likes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[likes]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>likes</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dislikes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[dislikes]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>dislikes</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>comment_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[comment_count]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>comment_count</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>thumbnail_link</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[thumbnail_link]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>thumbnail_link</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>comments_disabled</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[comments_disabled]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>comments_disabled</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ratings_disabled</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[ratings_disabled]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>ratings_disabled</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>video_error_or_removed</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[video_error_or_removed]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>video_error_or_removed</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[INvideos.csv]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[IN_category.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>kind</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[kind]</local-name>
+            <parent-name>[IN_category.csv]</parent-name>
+            <remote-alias>kind</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>etag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[etag]</local-name>
+            <parent-name>[IN_category.csv]</parent-name>
+            <remote-alias>etag</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[IN_category.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snippet.channelId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[snippet.channelId]</local-name>
+            <parent-name>[IN_category.csv]</parent-name>
+            <remote-alias>snippet.channelId</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snippet.title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[snippet.title]</local-name>
+            <parent-name>[IN_category.csv]</parent-name>
+            <remote-alias>snippet.title</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snippet.assignable</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[snippet.assignable]</local-name>
+            <parent-name>[IN_category.csv]</parent-name>
+            <remote-alias>snippet.assignable</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:comments_disabled:qk]&quot;' value='Videos with comments disabled' />
+          <alias key='&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:ratings_disabled:qk]&quot;' value='Videos with disabled ratings' />
+          <alias key='&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:video_error_or_removed:qk]&quot;' value='Removed videos' />
+          <alias key='&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:video_id:qk]&quot;' value='Total videos' />
+        </aliases>
+      </column>
+      <column caption='TrendDateCalc' datatype='date' name='[Calculation_414120118924279808]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='MAKEDATE(INT(SPLIT([Calculation_414120118945222657],&apos;.&apos;,1)),INT(SPLIT([trending_date],&apos;.&apos;,3)),INT(SPLIT([trending_date],&apos;.&apos;,2)))' />
+      </column>
+      <column caption='YrReplace' datatype='string' name='[Calculation_414120118945222657]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF STARTSWITH([trending_date],&apos;17.&apos;) THEN REPLACE([trending_date],&apos;17.&apos;,&apos;2017.&apos;) ELSEIF &#10;STARTSWITH([trending_date],&apos;18.&apos;) THEN REPLACE([trending_date],&apos;18.&apos;,&apos;2018.&apos;) END' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='IN_category.csv' datatype='table' name='[__tableau_internal_object_id__].[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='INvideos.csv' datatype='table' name='[__tableau_internal_object_id__].[INvideos.csv_384F64028C9B46928913F1CCE03C204F]' role='measure' type='quantitative' />
+      <column caption='Category Id' datatype='integer' name='[category_id]' role='dimension' type='ordinal' />
+      <column caption='Channel Title' datatype='string' name='[channel_title]' role='dimension' type='nominal' />
+      <column caption='Comment Count' datatype='integer' name='[comment_count]' role='measure' type='quantitative' />
+      <column caption='Comments Disabled' datatype='boolean' name='[comments_disabled]' role='dimension' type='nominal' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='Dislikes' datatype='integer' name='[dislikes]' role='measure' type='quantitative' />
+      <column caption='Etag' datatype='string' name='[etag]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Kind' datatype='string' name='[kind]' role='dimension' type='nominal' />
+      <column caption='Likes' datatype='integer' name='[likes]' role='measure' type='quantitative' />
+      <column caption='Publish Time' datatype='datetime' name='[publish_time]' role='dimension' type='ordinal' />
+      <column caption='Ratings Disabled' datatype='boolean' name='[ratings_disabled]' role='dimension' type='nominal' />
+      <column caption='Snippet.Assignable' datatype='boolean' name='[snippet.assignable]' role='dimension' type='nominal' />
+      <column caption='Snippet.Title' datatype='string' name='[snippet.title]' role='dimension' type='nominal' />
+      <column caption='Tags' datatype='string' name='[tags]' role='dimension' type='nominal' />
+      <column caption='Thumbnail Link' datatype='string' name='[thumbnail_link]' role='dimension' type='nominal' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='Trending Date' datatype='string' name='[trending_date]' role='dimension' type='nominal' />
+      <column caption='Video Error Or Removed' datatype='boolean' name='[video_error_or_removed]' role='dimension' type='nominal' />
+      <column caption='Video Id' datatype='string' name='[video_id]' role='dimension' type='nominal' />
+      <column caption='Views' datatype='integer' name='[views]' role='measure' type='quantitative' />
+      <column-instance column='[comments_disabled]' derivation='CountD' name='[ctd:comments_disabled:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ratings_disabled]' derivation='CountD' name='[ctd:ratings_disabled:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[video_error_or_removed]' derivation='CountD' name='[ctd:video_error_or_removed:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[video_id]' derivation='CountD' name='[ctd:video_id:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[channel_title]' derivation='None' name='[none:channel_title:nk]' pivot='key' type='nominal' />
+      <column-instance column='[snippet.title]' derivation='None' name='[none:snippet.title:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/manvijha/Documents/My Tableau Repository/Datasources/INvideos+.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F' table='[Extract].[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='INvideos.csv_384F64028C9B46928913F1CCE03C204F' table='[Extract].[INvideos.csv_384F64028C9B46928913F1CCE03C204F]' type='table' />
+            <relation name='IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F' table='[Extract].[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>video_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[video_id]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>video_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12811</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>trending_date</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[trending_date]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>trending_date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>215</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[title]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>title</remote-alias>
+              <ordinal>2</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13075</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>channel_title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[channel_title]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>channel_title</remote-alias>
+              <ordinal>3</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1938</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>category_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[category_id]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>category_id</remote-alias>
+              <ordinal>4</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>publish_time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[publish_time]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>publish_time</remote-alias>
+              <ordinal>5</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>12662</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tags</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tags]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>tags</remote-alias>
+              <ordinal>6</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8427</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>views</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[views]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>views</remote-alias>
+              <ordinal>7</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>30090</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>likes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[likes]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>likes</remote-alias>
+              <ordinal>8</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9870</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dislikes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[dislikes]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>dislikes</remote-alias>
+              <ordinal>9</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3481</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>comment_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[comment_count]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>comment_count</remote-alias>
+              <ordinal>10</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3761</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>thumbnail_link</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[thumbnail_link]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>thumbnail_link</remote-alias>
+              <ordinal>11</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12870</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>comments_disabled</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[comments_disabled]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>comments_disabled</remote-alias>
+              <ordinal>12</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ratings_disabled</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[ratings_disabled]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>ratings_disabled</remote-alias>
+              <ordinal>13</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>video_error_or_removed</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[video_error_or_removed]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>video_error_or_removed</remote-alias>
+              <ordinal>14</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[description]</local-name>
+              <parent-name>[INvideos.csv_384F64028C9B46928913F1CCE03C204F]</parent-name>
+              <remote-alias>description</remote-alias>
+              <ordinal>15</ordinal>
+              <family>INvideos.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9281</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>16</ordinal>
+              <family>IN_category.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>kind</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[kind]</local-name>
+              <parent-name>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</parent-name>
+              <remote-alias>kind</remote-alias>
+              <ordinal>17</ordinal>
+              <family>IN_category.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>etag</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[etag]</local-name>
+              <parent-name>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</parent-name>
+              <remote-alias>etag</remote-alias>
+              <ordinal>18</ordinal>
+              <family>IN_category.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>19</ordinal>
+              <family>IN_category.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>snippet.channelId</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[snippet.channelId]</local-name>
+              <parent-name>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</parent-name>
+              <remote-alias>snippet.channelId</remote-alias>
+              <ordinal>20</ordinal>
+              <family>IN_category.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>snippet.title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[snippet.title]</local-name>
+              <parent-name>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</parent-name>
+              <remote-alias>snippet.title</remote-alias>
+              <ordinal>21</ordinal>
+              <family>IN_category.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>snippet.assignable</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[snippet.assignable]</local-name>
+              <parent-name>[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]</parent-name>
+              <remote-alias>snippet.assignable</remote-alias>
+              <ordinal>22</ordinal>
+              <family>IN_category.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:channel_title:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Shahrukh K Adnan&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;MostlySane&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:snippet.title:nk]' type='palette'>
+            <map to='#4f5864'>
+              <bucket>&quot;Music&quot;</bucket>
+            </map>
+            <map to='#758087'>
+              <bucket>&quot;Film &amp; Animation&quot;</bucket>
+            </map>
+            <map to='#a4a9ab'>
+              <bucket>&quot;Entertainment&quot;</bucket>
+            </map>
+            <map to='#b4b7b7'>
+              <bucket>&quot;News &amp; Politics&quot;</bucket>
+            </map>
+            <map to='#d5d5d5'>
+              <bucket>&quot;Comedy&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8]&quot;</bucket>
+            </map>
+            <map to='#616c77'>
+              <bucket>&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:video_id:qk]&quot;</bucket>
+            </map>
+            <map to='#939c9e'>
+              <bucket>&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:ratings_disabled:qk]&quot;</bucket>
+            </map>
+            <map to='#acb0b1'>
+              <bucket>&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:video_error_or_removed:qk]&quot;</bucket>
+            </map>
+            <map to='#d5d5d5'>
+              <bucket>&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:comments_disabled:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='video_id' />
+        <field-sort-custom-order field='trending_date' />
+        <field-sort-custom-order field='Calculation_414120118945222657' />
+        <field-sort-custom-order field='Calculation_414120118924279808' />
+        <field-sort-custom-order field='title' />
+        <field-sort-custom-order field='channel_title' />
+        <field-sort-custom-order field='category_id' />
+        <field-sort-custom-order field='publish_time' />
+        <field-sort-custom-order field='tags' />
+        <field-sort-custom-order field='views' />
+        <field-sort-custom-order field='likes' />
+        <field-sort-custom-order field='dislikes' />
+        <field-sort-custom-order field='comment_count' />
+        <field-sort-custom-order field='thumbnail_link' />
+        <field-sort-custom-order field='comments_disabled' />
+        <field-sort-custom-order field='ratings_disabled' />
+        <field-sort-custom-order field='video_error_or_removed' />
+        <field-sort-custom-order field='description' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='IN_category.csv' id='IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F'>
+            <properties context=''>
+              <relation connection='textscan.1jmn7e11d1v8sg1g395tq07aeetc' name='IN_category.csv' table='[IN_category#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='kind' ordinal='1' />
+                  <column datatype='string' name='etag' ordinal='2' />
+                  <column datatype='integer' name='id' ordinal='3' />
+                  <column datatype='string' name='snippet.channelId' ordinal='4' />
+                  <column datatype='string' name='snippet.title' ordinal='5' />
+                  <column datatype='boolean' name='snippet.assignable' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F' table='[Extract].[IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F]' type='table' />
+            </properties>
+          </object>
+          <object caption='INvideos.csv' id='INvideos.csv_384F64028C9B46928913F1CCE03C204F'>
+            <properties context=''>
+              <relation connection='textscan.1jmn7e11d1v8sg1g395tq07aeetc' name='INvideos.csv' table='[INvideos#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='video_id' ordinal='0' />
+                  <column datatype='string' date-parse-format='dd.yy.MM' name='trending_date' ordinal='1' />
+                  <column datatype='string' name='title' ordinal='2' />
+                  <column datatype='string' name='channel_title' ordinal='3' />
+                  <column datatype='integer' name='category_id' ordinal='4' />
+                  <column datatype='datetime' name='publish_time' ordinal='5' />
+                  <column datatype='string' name='tags' ordinal='6' />
+                  <column datatype='integer' name='views' ordinal='7' />
+                  <column datatype='integer' name='likes' ordinal='8' />
+                  <column datatype='integer' name='dislikes' ordinal='9' />
+                  <column datatype='integer' name='comment_count' ordinal='10' />
+                  <column datatype='string' name='thumbnail_link' ordinal='11' />
+                  <column datatype='boolean' name='comments_disabled' ordinal='12' />
+                  <column datatype='boolean' name='ratings_disabled' ordinal='13' />
+                  <column datatype='boolean' name='video_error_or_removed' ordinal='14' />
+                  <column datatype='string' name='description' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='INvideos.csv_384F64028C9B46928913F1CCE03C204F' table='[Extract].[INvideos.csv_384F64028C9B46928913F1CCE03C204F]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[category_id]' />
+              <expression op='[id]' />
+            </expression>
+            <first-end-point object-id='INvideos.csv_384F64028C9B46928913F1CCE03C204F' />
+            <second-end-point object-id='IN_category.csv_D0F651B5035346C2BC171C3577BB7B4F' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Hyperlink1' name='[Action1_1B38515632074415809386064D9C12F2]'>
+      <source dashboard='India YT Dash' type='sheet' worksheet='Video with max dislikes' />
+      <link caption='' expression='&lt;[thumbnail_link]&gt;' />
+    </action>
+    <datasources>
+      <datasource caption='INvideos+' name='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8' />
+    </datasources>
+    <datasource-dependencies datasource='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8'>
+      <column caption='Thumbnail Link' datatype='string' name='[thumbnail_link]' role='dimension' type='nominal' />
+    </datasource-dependencies>
+  </actions>
+  <worksheets>
+    <worksheet name='Channel Growth'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='INvideos+' name='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8'>
+            <column caption='TrendDateCalc' datatype='date' name='[Calculation_414120118924279808]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='MAKEDATE(INT(SPLIT([Calculation_414120118945222657],&apos;.&apos;,1)),INT(SPLIT([trending_date],&apos;.&apos;,3)),INT(SPLIT([trending_date],&apos;.&apos;,2)))' />
+            </column>
+            <column caption='YrReplace' datatype='string' name='[Calculation_414120118945222657]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF STARTSWITH([trending_date],&apos;17.&apos;) THEN REPLACE([trending_date],&apos;17.&apos;,&apos;2017.&apos;) ELSEIF &#10;STARTSWITH([trending_date],&apos;18.&apos;) THEN REPLACE([trending_date],&apos;18.&apos;,&apos;2018.&apos;) END' />
+            </column>
+            <column caption='Channel Title' datatype='string' name='[channel_title]' role='dimension' type='nominal' />
+            <column-instance column='[channel_title]' derivation='None' name='[none:channel_title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[views]' derivation='Sum' name='[sum:views:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_414120118924279808]' derivation='Month-Trunc' name='[tmn:Calculation_414120118924279808:qk]' pivot='key' type='quantitative' />
+            <column caption='Trending Date' datatype='string' name='[trending_date]' role='dimension' type='nominal' />
+            <column caption='Views' datatype='integer' name='[views]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' context='true' filter-group='4'>
+            <groupfilter function='member' level='[none:channel_title:nk]' member='&quot;Shitty Ideas Trending&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[tmn:Calculation_414120118924279808:qk]' scope='cols' value='' />
+            <format attr='stroke-color' value='#ffffff' />
+            <format attr='tick-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' value='#ffffff' />
+            <format attr='color' data-class='subtotal' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' value='#e9313b' />
+            <format attr='color' data-class='subtotal' scope='cols' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='cols' value='#ffffff' />
+            <format attr='color' scope='rows' value='#ffffff' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e9313b' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='dotted' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='dashed' />
+            <format attr='stroke-color' value='#ffffff4b' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='color' value='#000000' />
+            <format attr='title' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' value='Select Channel&#10;'>
+              <formatted-text>
+                <run fontcolor='#ffffff'>Select Channel</run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#ffffff' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]</rows>
+        <cols>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[tmn:Calculation_414120118924279808:qk]</cols>
+      </table>
+      <simple-id uuid='{2DDE34DC-FF6B-4EA5-BEDC-043EE7B3A1FF}' />
+    </worksheet>
+    <worksheet name='Most Viewed Channels'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='INvideos+' name='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8'>
+            <column caption='TrendDateCalc' datatype='date' name='[Calculation_414120118924279808]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='MAKEDATE(INT(SPLIT([Calculation_414120118945222657],&apos;.&apos;,1)),INT(SPLIT([trending_date],&apos;.&apos;,3)),INT(SPLIT([trending_date],&apos;.&apos;,2)))' />
+            </column>
+            <column caption='YrReplace' datatype='string' name='[Calculation_414120118945222657]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF STARTSWITH([trending_date],&apos;17.&apos;) THEN REPLACE([trending_date],&apos;17.&apos;,&apos;2017.&apos;) ELSEIF &#10;STARTSWITH([trending_date],&apos;18.&apos;) THEN REPLACE([trending_date],&apos;18.&apos;,&apos;2018.&apos;) END' />
+            </column>
+            <column caption='Channel Title' datatype='string' name='[channel_title]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_414120118924279808]' derivation='MY' name='[my:Calculation_414120118924279808:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[channel_title]' derivation='None' name='[none:channel_title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[views]' derivation='Sum' name='[sum:views:qk]' pivot='key' type='quantitative' />
+            <column caption='Trending Date' datatype='string' name='[trending_date]' role='dimension' type='nominal' />
+            <column caption='Views' datatype='integer' name='[views]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[my:Calculation_414120118924279808:ok]' filter-group='5'>
+            <groupfilter function='level-members' level='[my:Calculation_414120118924279808:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([views])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:channel_title:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]</column>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[my:Calculation_414120118924279808:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' value='#e9313b' />
+            <format attr='width' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' value='192' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='rows' value='#ffffff' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e9313b' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#ffffff' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]</rows>
+        <cols>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]</cols>
+      </table>
+      <simple-id uuid='{86D1DD5D-909D-4B1D-A79D-3068ED99A2CC}' />
+    </worksheet>
+    <worksheet name='Most Viewed Videos'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='INvideos+' name='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8'>
+            <column caption='Channel Title' datatype='string' name='[channel_title]' role='dimension' type='nominal' />
+            <column-instance column='[channel_title]' derivation='None' name='[none:channel_title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[views]' derivation='Sum' name='[sum:views:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+            <column caption='Views' datatype='integer' name='[views]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' context='true' filter-group='4'>
+            <groupfilter function='member' level='[none:channel_title:nk]' member='&quot;Shitty Ideas Trending&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([views])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:title:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]</column>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' value='#e9313b' />
+            <format attr='background-color' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]' value='#e9313b' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='rows' value='#ffffff' />
+            <format attr='color' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e9313b' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#ffffff' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]</rows>
+        <cols>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]</cols>
+      </table>
+      <simple-id uuid='{BB86C481-AC51-4DE0-940A-1C067498A118}' />
+    </worksheet>
+    <worksheet name='Top 5 categories and distribution'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='INvideos+' name='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8'>
+            <column caption='TrendDateCalc' datatype='date' name='[Calculation_414120118924279808]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='MAKEDATE(INT(SPLIT([Calculation_414120118945222657],&apos;.&apos;,1)),INT(SPLIT([trending_date],&apos;.&apos;,3)),INT(SPLIT([trending_date],&apos;.&apos;,2)))' />
+            </column>
+            <column caption='YrReplace' datatype='string' name='[Calculation_414120118945222657]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF STARTSWITH([trending_date],&apos;17.&apos;) THEN REPLACE([trending_date],&apos;17.&apos;,&apos;2017.&apos;) ELSEIF &#10;STARTSWITH([trending_date],&apos;18.&apos;) THEN REPLACE([trending_date],&apos;18.&apos;,&apos;2018.&apos;) END' />
+            </column>
+            <column-instance column='[Calculation_414120118924279808]' derivation='MY' name='[my:Calculation_414120118924279808:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[snippet.title]' derivation='None' name='[none:snippet.title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[views]' derivation='Sum' name='[pcto:sum:views:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:snippet.title:nk]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[views]' derivation='Sum' name='[pcto:sum:views:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Snippet.Title' datatype='string' name='[snippet.title]' role='dimension' type='nominal' />
+            <column-instance column='[views]' derivation='Sum' name='[sum:views:qk]' pivot='key' type='quantitative' />
+            <column caption='Trending Date' datatype='string' name='[trending_date]' role='dimension' type='nominal' />
+            <column caption='Views' datatype='integer' name='[views]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[my:Calculation_414120118924279808:ok]' filter-group='5'>
+            <groupfilter function='level-members' level='[my:Calculation_414120118924279808:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:snippet.title:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([views])' function='order' user:ui-marker='order'>
+                <groupfilter expression='SUM([views]) &lt;&gt; 0' function='filter' user:ui-filter-by-field='true' user:ui-marker='filter-by'>
+                  <groupfilter function='level-members' level='[none:snippet.title:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:snippet.title:nk]</column>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[my:Calculation_414120118924279808:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e9313b' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:snippet.title:nk]' />
+              <wedge-size column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[pcto:sum:views:qk:1]' />
+              <size column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:views:qk]' />
+              <text column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:snippet.title:nk]' />
+              <text column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[pcto:sum:views:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#ffffff' />
+                <format attr='mark-transparency' value='83' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C12AB9AE-4919-4EC0-A42C-6652F4739D7E}' />
+    </worksheet>
+    <worksheet name='Total vs removed/disabled'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='INvideos+' name='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8'>
+            <column caption='Channel Title' datatype='string' name='[channel_title]' role='dimension' type='nominal' />
+            <column caption='Comments Disabled' datatype='boolean' name='[comments_disabled]' role='dimension' type='nominal' />
+            <column-instance column='[comments_disabled]' derivation='CountD' name='[ctd:comments_disabled:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ratings_disabled]' derivation='CountD' name='[ctd:ratings_disabled:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[video_error_or_removed]' derivation='CountD' name='[ctd:video_error_or_removed:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[video_id]' derivation='CountD' name='[ctd:video_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[channel_title]' derivation='None' name='[none:channel_title:nk]' pivot='key' type='nominal' />
+            <column caption='Ratings Disabled' datatype='boolean' name='[ratings_disabled]' role='dimension' type='nominal' />
+            <column caption='Video Error Or Removed' datatype='boolean' name='[video_error_or_removed]' role='dimension' type='nominal' />
+            <column caption='Video Id' datatype='string' name='[video_id]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:video_id:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:ratings_disabled:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:comments_disabled:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:video_error_or_removed:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:video_id:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:ratings_disabled:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:comments_disabled:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[ctd:video_error_or_removed:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' context='true' filter-group='4'>
+            <groupfilter function='member' level='[none:channel_title:nk]' member='&quot;Shitty Ideas Trending&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]</column>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[Multiple Values]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' value='#e9313b' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' value='false' />
+            <format attr='color' scope='rows' value='#ffffff' />
+            <format attr='color' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[:Measure Names]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e9313b' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='color' value='#ffffff' />
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[Multiple Values]</rows>
+        <cols>([federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk] / [federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{6B27F251-5E9F-4CEB-B5C8-0090A01EE9B5}' />
+    </worksheet>
+    <worksheet name='Video with max comments'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='INvideos+' name='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8'>
+            <column caption='Channel Title' datatype='string' name='[channel_title]' role='dimension' type='nominal' />
+            <column caption='Comment Count' datatype='integer' name='[comment_count]' role='measure' type='quantitative' />
+            <column-instance column='[channel_title]' derivation='None' name='[none:channel_title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[comment_count]' derivation='Sum' name='[sum:comment_count:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' context='true' filter-group='4'>
+            <groupfilter function='member' level='[none:channel_title:nk]' member='&quot;Shitty Ideas Trending&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]'>
+            <groupfilter count='1' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([comment_count])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:title:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]</column>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' data-class='subtotal' scope='cols' value='#ffffff' />
+            <format attr='color' value='#ffffff' />
+            <format attr='height' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='42' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='260' />
+            <format attr='background-color' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' value='#e9313b' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='rows' value='#ffffff' />
+            <format attr='color' scope='cols' value='#ffffff' />
+            <format attr='wrap' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='on' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e9313b' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:comment_count:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{F0F294F8-88A0-450A-9384-84490EACB72E}' />
+    </worksheet>
+    <worksheet name='Video with max dislikes'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='INvideos+' name='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8'>
+            <column caption='Channel Title' datatype='string' name='[channel_title]' role='dimension' type='nominal' />
+            <column caption='Dislikes' datatype='integer' name='[dislikes]' role='measure' type='quantitative' />
+            <column-instance column='[channel_title]' derivation='None' name='[none:channel_title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[dislikes]' derivation='Sum' name='[sum:dislikes:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' context='true' filter-group='4'>
+            <groupfilter function='member' level='[none:channel_title:nk]' member='&quot;Shitty Ideas Trending&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]'>
+            <groupfilter count='1' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([dislikes])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:title:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]</column>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' data-class='subtotal' scope='cols' value='#ffffff' />
+            <format attr='color' value='#ffffff' />
+            <format attr='height' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='41' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='304' />
+            <format attr='background-color' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' value='#e9313b' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='rows' value='#ffffff' />
+            <format attr='color' scope='cols' value='#ffffff' />
+            <format attr='wrap' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='on' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e9313b' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:dislikes:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{92CB76F5-FD7F-414A-838B-D1DD14C4377A}' />
+    </worksheet>
+    <worksheet name='Video with max likes'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='INvideos+' name='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8'>
+            <column caption='Channel Title' datatype='string' name='[channel_title]' role='dimension' type='nominal' />
+            <column caption='Likes' datatype='integer' name='[likes]' role='measure' type='quantitative' />
+            <column-instance column='[channel_title]' derivation='None' name='[none:channel_title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[likes]' derivation='Sum' name='[sum:likes:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' context='true' filter-group='4'>
+            <groupfilter function='member' level='[none:channel_title:nk]' member='&quot;Shitty Ideas Trending&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]'>
+            <groupfilter count='1' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([likes])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:title:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]</column>
+            <column>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='44' />
+            <format attr='color' data-class='subtotal' scope='cols' value='#ffffff' />
+            <format attr='color' value='#ffffff' />
+            <format attr='wrap' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='on' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='296' />
+            <format attr='background-color' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' value='#e9313b' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='rows' value='#ffffff' />
+            <format attr='color' scope='cols' value='#ffffff' />
+            <format attr='wrap' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='on' />
+            <format attr='color' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='#ffffff' />
+            <format attr='text-align' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='center' />
+            <format attr='vertical-align' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]' value='center' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:likes:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e9313b' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[sum:likes:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:title:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{925755A7-0DE2-48B2-82CC-6035A48BBD6F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='India YT Dash'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#000000' />
+        </style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1400' minheight='900' minwidth='1400' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='INvideos+' name='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0tfnhwr1m2yyw91gs0jrt1e5goh8'>
+        <column caption='TrendDateCalc' datatype='date' name='[Calculation_414120118924279808]' role='dimension' type='ordinal'>
+          <calculation class='tableau' formula='MAKEDATE(INT(SPLIT([Calculation_414120118945222657],&apos;.&apos;,1)),INT(SPLIT([trending_date],&apos;.&apos;,3)),INT(SPLIT([trending_date],&apos;.&apos;,2)))' />
+        </column>
+        <column caption='Channel Title' datatype='string' name='[channel_title]' role='dimension' type='nominal' />
+        <column-instance column='[Calculation_414120118924279808]' derivation='MY' name='[my:Calculation_414120118924279808:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[channel_title]' derivation='None' name='[none:channel_title:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='91582' id='19' param='horz' type-v2='layout-flow' w='98858' x='571' y='7529'>
+            <zone h='91582' id='17' type-v2='layout-basic' w='98858' x='571' y='7529'>
+              <zone h='39338' id='8' param='horz' type-v2='layout-flow' w='98858' x='571' y='7529'>
+                <zone h='39338' id='6' type-v2='layout-basic' w='98858' x='571' y='7529'>
+                  <zone h='39338' id='9' name='Top 5 categories and distribution' w='46522' x='52907' y='7529'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='39338' id='16' name='Most Viewed Channels' w='52336' x='571' y='7529'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='22013' id='10' name='Channel Growth' w='36143' x='571' y='53320'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='45791' id='21' name='Most Viewed Videos' w='33715' x='36714' y='53320'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='16004' id='34' name='Video with max comments' w='29000' x='70429' y='83107'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='14893' id='35' name='Video with max dislikes' w='29000' x='70429' y='68214'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='14894' id='36' name='Video with max likes' w='29000' x='70429' y='53320'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6453' id='37' param='vert' type-v2='layout-flow' w='98858' x='571' y='46867'>
+                <zone h='6453' id='40' is-centered='0' type-v2='bitmap' w='98858' x='571' y='46867'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='23778' id='39' name='Total vs removed/disabled' w='36143' x='571' y='75333'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='6640' id='31' param='vert' type-v2='layout-flow' w='98858' x='571' y='889'>
+            <zone h='6640' id='32' is-centered='0' param='/Users/manvijha/Documents/MyProjects/Tableau/YouTubeAnalysis/Screenshot 2023-02-03 at 3.33.44 PM.jpeg' type-v2='bitmap' w='98858' x='571' y='889'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='6444' id='13' mode='dropdown' name='Channel Growth' param='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' type-v2='filter' values='relevant' w='12000' x='643' y='52222' />
+        <zone h='6500' id='20' mode='checkdropdown' name='Most Viewed Channels' param='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[my:Calculation_414120118924279808:ok]' type-v2='filter' w='12000' x='1214' y='8625' />
+        <zone h='8000' id='33' is-centered='0' is-scaled='1' param='/Users/manvijha/Documents/MyProjects/Tableau/YouTubeAnalysis/Screenshot 2023-02-03 at 3.33.44 PM.jpeg' type-v2='bitmap' w='65286' x='47071' y='500' />
+        <zone forceUpdate='true' h='8000' id='38' type-v2='text' w='98214' x='3643' y='48125'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff' fontsize='15' underline='true'>Channel Specific Stats</run>
+          </formatted-text>
+        </zone>
+        <zone h='10667' id='47' is-centered='0' is-scaled='1' param='/Users/manvijha/Documents/MyProjects/Tableau/YouTubeAnalysis/logo.jpeg' type-v2='bitmap' w='28429' x='45857' y='889' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2200' minheight='2200' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='53' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='52' param='vert' type-v2='layout-flow' w='98858' x='571' y='889'>
+                <zone fixed-size='72' h='8000' id='33' is-centered='0' is-fixed='true' is-scaled='1' param='/Users/manvijha/Documents/MyProjects/Tableau/YouTubeAnalysis/Screenshot 2023-02-03 at 3.33.44 PM.jpeg' type-v2='bitmap' w='65286' x='47071' y='500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='52' h='6640' id='32' is-centered='0' is-fixed='true' param='/Users/manvijha/Documents/MyProjects/Tableau/YouTubeAnalysis/Screenshot 2023-02-03 at 3.33.44 PM.jpeg' type-v2='bitmap' w='98858' x='571' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='96' h='10667' id='47' is-centered='0' is-fixed='true' is-scaled='1' param='/Users/manvijha/Documents/MyProjects/Tableau/YouTubeAnalysis/logo.jpeg' type-v2='bitmap' w='28429' x='45857' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='20' mode='checkdropdown' name='Most Viewed Channels' param='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[my:Calculation_414120118924279808:ok]' type-v2='filter' w='12000' x='1214' y='8625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39338' id='16' is-fixed='true' name='Most Viewed Channels' w='52336' x='571' y='7529'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39338' id='9' is-fixed='true' name='Top 5 categories and distribution' w='46522' x='52907' y='7529'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='50' h='6453' id='40' is-centered='0' is-fixed='true' type-v2='bitmap' w='98858' x='571' y='46867'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='8000' id='38' type-v2='text' w='98214' x='3643' y='48125'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#ffffff' fontsize='15' underline='true'>Channel Specific Stats</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6444' id='13' mode='dropdown' name='Channel Growth' param='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' type-v2='filter' values='relevant' w='12000' x='643' y='52222'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='190' h='22013' id='10' is-fixed='true' name='Channel Growth' w='36143' x='571' y='53320'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45791' id='21' is-fixed='true' name='Most Viewed Videos' w='33715' x='36714' y='53320'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='126' h='14894' id='36' is-fixed='true' name='Video with max likes' w='29000' x='70429' y='53320'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='126' h='14893' id='35' is-fixed='true' name='Video with max dislikes' w='29000' x='70429' y='68214'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='206' h='23778' id='39' is-fixed='true' name='Total vs removed/disabled' w='36143' x='571' y='75333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='136' h='16004' id='34' is-fixed='true' name='Video with max comments' w='29000' x='70429' y='83107'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9F72E8DF-99B2-43A4-A68B-E5739AECD9E6}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Most Viewed Channels'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[my:Calculation_414120118924279808:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{C8270ECE-360C-4EF5-8B4A-6600BF202209}' />
+    </window>
+    <window class='worksheet' name='Most Viewed Videos'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' type='filter' values='relevant' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <floating-toolbar-visibility value='1' />
+      </viewpoint>
+      <simple-id uuid='{C3824E9F-375C-4A7E-8E3D-377C4FFA2B84}' />
+    </window>
+    <window class='worksheet' name='Total vs removed/disabled'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' type='filter' values='relevant' />
+            <card pane-specification-id='0' param='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='1' />
+      </viewpoint>
+      <simple-id uuid='{CAC75A12-F636-4CF4-B4EF-6FE6B013F571}' />
+    </window>
+    <window class='worksheet' name='Video with max likes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{E723BBB2-0FAC-4578-969B-2582299D3201}' />
+    </window>
+    <window class='worksheet' name='Video with max dislikes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{E49B4EC6-B17C-4029-A4BA-266F45AFDCD0}' />
+    </window>
+    <window class='worksheet' name='Video with max comments'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{B3D14053-9316-4FC1-86E1-9352CB20BD65}' />
+    </window>
+    <window class='worksheet' name='Channel Growth'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0tfnhwr1m2yyw91gs0jrt1e5goh8].[none:channel_title:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F134045D-25DC-4B78-BA15-94D2603ABC22}' />
+    </window>
+    <window class='worksheet' name='Top 5 categories and distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{194170AB-E764-4158-92CD-7E67CC9A1755}' />
+    </window>
+    <window class='dashboard' maximized='true' name='India YT Dash'>
+      <viewpoints>
+        <viewpoint name='Channel Growth'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Most Viewed Channels'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Most Viewed Videos'>
+          <zoom type='fit-height' />
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+        <viewpoint name='Top 5 categories and distribution'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total vs removed/disabled'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+        <viewpoint name='Video with max comments'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Video with max dislikes'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Video with max likes'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='13' />
+      <simple-id uuid='{D1029CA8-B133-4C6C-9C00-E3BD27BAA733}' />
+    </window>
+  </windows>
+</workbook>
